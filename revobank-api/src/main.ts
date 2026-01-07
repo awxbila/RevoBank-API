@@ -22,6 +22,14 @@ async function bootstrap() {
       'Banking API for RevoBank - Secure and Scalable Banking System',
     )
     .setVersion('1.0')
+    .setContact(
+      'RevoBank Bila',
+      'https://revobank.com',
+      'nablahnur54@gmail.com',
+    ) //blum
+    .setLicense('MIT', 'https://opensource.org/licenses/MIT')
+    .addServer('http://localhost:3000', 'Local Development Server')
+    .addServer('https://api.revobank.com', 'Production Server') //blum
     .addBearerAuth(
       {
         type: 'http',
