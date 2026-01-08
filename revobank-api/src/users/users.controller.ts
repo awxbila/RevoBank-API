@@ -1,4 +1,4 @@
-import { Controller, Get, Patch, Body, UseGuards } from '@nestjs/common';
+import { Controller, Get, Patch, Body, UseGuards, Req } from '@nestjs/common';
 import {
   ApiTags,
   ApiOperation,
@@ -16,6 +16,10 @@ import { CurrentUser } from '../auth/decorators/current-user.decorator';
 export class UsersController {
   constructor(private usersService: UsersService) {}
   @Get('profile')
+  async getProfile(@Req() req) {
+    //req user berasal dari jwtstrategy
+    return this.usersService.getProfile(req.user.userId);
+  }
   @ApiOperation({ summary: 'Get user profile' })
   @ApiResponse({
     status: 200,
@@ -32,9 +36,6 @@ export class UsersController {
     },
   })
   @ApiResponse({ status: 401, description: 'Unauthorized' })
-  async getProfile(@CurrentUser() user: any) {
-    return this.usersService.getProfile(user.userId);
-  }
   @Patch('profile')
   @ApiOperation({ summary: 'Update user profile' })
   @ApiResponse({
