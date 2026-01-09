@@ -9,4 +9,10 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+  @Get()
+  getHome() {
+    return {
+      message: 'Revobank API is running',
+    };
+  }
 }

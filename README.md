@@ -169,5 +169,3 @@ The application is deployed on Railway:
 
 This project is licensed under the MIT License.
 \`\`\`
-
----
