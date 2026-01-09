@@ -128,8 +128,8 @@ npm run test:cov
 
 The application is deployed on Railway:
 
-- **API URL**: https://revobank-api-production-a9e7.up.railway.app
-- **Swagger Docs**: https://revobank-api-production-a9e7.up.railway.app/api-docs
+- **API URL**: https://revobankbila.my.id
+- **Swagger Docs**: https://revobankbila.my.id/api-docs
 
 ## 📝API Endpoints
 
