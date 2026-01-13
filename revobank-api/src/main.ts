@@ -23,13 +23,13 @@ async function bootstrap() {
     )
     .setVersion('1.0')
     .setContact(
-      'RevoBank Bila',
-      'https://revobank.com',
+      'Nabilah Nur Hazimah',
+      'https://nabilahporfo.my.id',
       'nablahnur54@gmail.com',
-    ) //blum
+    )
     .setLicense('MIT', 'https://opensource.org/licenses/MIT')
     .addServer('http://localhost:3000', 'Local Development Server')
-    .addServer('https://api.revobank.com', 'Production Server') //blum
+    .addServer('https://revobankbila.my.id', 'Production Server')
     .addBearerAuth(
       {
         type: 'http',
